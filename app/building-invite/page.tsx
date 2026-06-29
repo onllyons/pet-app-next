@@ -1,28 +1,46 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 
 function buildDeepLink(token: string) {
   return `petapp:///building-invite?token=${encodeURIComponent(token)}`;
 }
 
+function subscribeToLocation() {
+  return () => {};
+}
+
+function getSearchSnapshot() {
+  return window.location.search;
+}
+
+function getHrefSnapshot() {
+  return window.location.href;
+}
+
+function getServerSnapshot() {
+  return "";
+}
+
 export default function BuildingInvitePage() {
   const [copied, setCopied] = useState(false);
-  const [token, setToken] = useState("");
-  const [mounted, setMounted] = useState(false);
+  const search = useSyncExternalStore(
+    subscribeToLocation,
+    getSearchSnapshot,
+    getServerSnapshot,
+  );
+  const href = useSyncExternalStore(
+    subscribeToLocation,
+    getHrefSnapshot,
+    getServerSnapshot,
+  );
 
-  useEffect(() => {
-    setMounted(true);
-    const params = new URLSearchParams(window.location.search);
-    setToken(params.get("token") ?? "");
-  }, []);
-
+  const token = useMemo(() => {
+    const params = new URLSearchParams(search);
+    return params.get("token") ?? "";
+  }, [search]);
   const deepLink = useMemo(() => buildDeepLink(token), [token]);
-  const fullWebUrl = useMemo(() => {
-    if (!mounted) return "";
-    const url = new URL(window.location.href);
-    return url.toString();
-  }, [mounted]);
+  const fullWebUrl = useMemo(() => (href ? new URL(href).toString() : ""), [href]);
 
   useEffect(() => {
     if (!token) return;

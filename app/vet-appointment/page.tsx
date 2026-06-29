@@ -1,39 +1,55 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 
 function buildDeepLink(search: string) {
   return `petapp:///vet-appointment${search || ""}`;
 }
 
+function subscribeToLocation() {
+  return () => {};
+}
+
+function getSearchSnapshot() {
+  return window.location.search;
+}
+
+function getHrefSnapshot() {
+  return window.location.href;
+}
+
+function getServerSnapshot() {
+  return "";
+}
+
 export default function VetAppointmentPage() {
   const [copied, setCopied] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const [search, setSearch] = useState("");
-
-  useEffect(() => {
-    setMounted(true);
-    setSearch(window.location.search);
-  }, []);
+  const search = useSyncExternalStore(
+    subscribeToLocation,
+    getSearchSnapshot,
+    getServerSnapshot,
+  );
+  const href = useSyncExternalStore(
+    subscribeToLocation,
+    getHrefSnapshot,
+    getServerSnapshot,
+  );
 
   const params = useMemo(() => new URLSearchParams(search), [search]);
   const vendorId = params.get("vendorId") ?? "";
   const provider = params.get("provider") ?? "";
   const deepLink = useMemo(() => buildDeepLink(search), [search]);
-  const fullWebUrl = useMemo(() => {
-    if (!mounted) return "";
-    return new URL(window.location.href).toString();
-  }, [mounted]);
+  const fullWebUrl = useMemo(() => (href ? new URL(href).toString() : ""), [href]);
 
   useEffect(() => {
-    if (!mounted || !vendorId) return;
+    if (!vendorId) return;
 
     const timer = window.setTimeout(() => {
       window.location.href = deepLink;
     }, 400);
 
     return () => window.clearTimeout(timer);
-  }, [deepLink, mounted, vendorId]);
+  }, [deepLink, vendorId]);
 
   async function handleCopy() {
     const value = fullWebUrl || window.location.href;

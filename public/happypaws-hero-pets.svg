@@ -1,0 +1,78 @@
+<svg width="780" height="560" viewBox="0 0 780 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">HappyPaws pet city illustration</title>
+  <desc id="desc">A friendly dog and cat in a sunny park with city buildings, trees, and pet app markers.</desc>
+  <rect width="780" height="560" rx="56" fill="#EAF6FF"/>
+  <circle cx="408" cy="253" r="226" fill="#BEE8FF"/>
+  <path d="M95 412c64-76 171-112 296-93 104 16 197-15 290-89v230H95v-48Z" fill="#81D770"/>
+  <path d="M68 464c67-51 169-82 303-62 131 20 245-8 344-83v145H68Z" fill="#42B85D"/>
+  <path d="M185 400c60-40 128-62 204-64 77-2 143 15 198 50" stroke="#F7DFA5" stroke-width="40" stroke-linecap="round"/>
+  <path d="M186 399c60-40 128-61 204-63 77-2 143 15 198 50" stroke="#D8B672" stroke-width="2" stroke-dasharray="10 14"/>
+  <rect x="535" y="127" width="124" height="168" rx="16" fill="#0B4EDB"/>
+  <rect x="556" y="149" width="19" height="24" rx="4" fill="#DFF3FF"/>
+  <rect x="588" y="149" width="19" height="24" rx="4" fill="#DFF3FF"/>
+  <rect x="620" y="149" width="19" height="24" rx="4" fill="#DFF3FF"/>
+  <rect x="556" y="190" width="19" height="24" rx="4" fill="#DFF3FF"/>
+  <rect x="588" y="190" width="19" height="24" rx="4" fill="#DFF3FF"/>
+  <rect x="620" y="190" width="19" height="24" rx="4" fill="#DFF3FF"/>
+  <rect x="572" y="232" width="50" height="63" rx="9" fill="#09349A"/>
+  <rect x="607" y="81" width="88" height="215" rx="16" fill="#1769F5"/>
+  <rect x="626" y="106" width="17" height="23" rx="4" fill="#E9F7FF"/>
+  <rect x="655" y="106" width="17" height="23" rx="4" fill="#E9F7FF"/>
+  <rect x="626" y="147" width="17" height="23" rx="4" fill="#E9F7FF"/>
+  <rect x="655" y="147" width="17" height="23" rx="4" fill="#E9F7FF"/>
+  <rect x="626" y="188" width="17" height="23" rx="4" fill="#E9F7FF"/>
+  <rect x="655" y="188" width="17" height="23" rx="4" fill="#E9F7FF"/>
+  <path d="M123 328c-8-66 8-118 46-154 43 41 58 92 45 154h-91Z" fill="#1B8A43"/>
+  <path d="M170 330V163" stroke="#8A4B1F" stroke-width="17" stroke-linecap="round"/>
+  <path d="M96 219c19-49 56-78 110-86 31 42 36 81 16 116-43 8-85-2-126-30Z" fill="#59BD44"/>
+  <path d="M155 139c51-30 98-28 142 8 1 47-20 80-64 99-45-19-71-54-78-107Z" fill="#74CE39"/>
+  <path d="M61 276c48-54 100-71 157-50 13 47 2 86-33 118-52-2-94-25-124-68Z" fill="#44AC3A"/>
+  <path d="M413 197c24-21 47-31 68-29 18 13 21 35 8 66-25 1-51-11-76-37Z" fill="#C46B26"/>
+  <path d="M329 185c-26-17-50-22-72-15-13 18-9 40 11 66 25-6 45-23 61-51Z" fill="#C46B26"/>
+  <path d="M272 236c15-61 70-94 132-81 66 13 101 66 85 132-17 70-75 110-142 97-65-13-91-82-75-148Z" fill="#FFFFFF"/>
+  <path d="M310 226c17-42 55-65 101-56 45 8 71 41 67 88-11-21-29-33-55-37-44-8-82-6-113 5Z" fill="#8B4A23"/>
+  <circle cx="337" cy="261" r="16" fill="#081638"/>
+  <circle cx="430" cy="257" r="16" fill="#081638"/>
+  <circle cx="343" cy="255" r="5" fill="white"/>
+  <circle cx="436" cy="251" r="5" fill="white"/>
+  <path d="M383 283c15-3 25 1 28 10-5 10-14 14-26 12-12-1-20-7-23-17 5-4 12-6 21-5Z" fill="#1E2030"/>
+  <path d="M371 322c22 17 44 16 66-3" stroke="#CE4C49" stroke-width="8" stroke-linecap="round"/>
+  <path d="M355 288c-27 12-52 13-76 2" stroke="#B8B8B8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M419 287c25 14 52 17 80 8" stroke="#B8B8B8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M292 375c-12 22-9 44 9 66l43-33c-6-20-23-31-52-33Z" fill="#F2A45F"/>
+  <path d="M462 365c34 6 53 24 58 53l-55 10c-14-14-15-35-3-63Z" fill="#F2A45F"/>
+  <path d="M287 370c53 30 118 31 193 4l13 51c-66 42-141 43-225 4l19-59Z" fill="#FFFFFF"/>
+  <path d="M502 294c29-50 73-68 132-54 54 15 82 51 84 110 2 58-23 100-75 126-58 25-107 16-149-27-40-47-38-99 8-155Z" fill="#E99131"/>
+  <path d="M531 285c-10-41-1-75 28-102 35 31 48 67 39 108l-67-6Z" fill="#E99131"/>
+  <path d="M648 291c6-43 29-73 68-90 19 42 14 80-13 115l-55-25Z" fill="#E99131"/>
+  <path d="M528 316c45-34 95-42 151-26 32 34 40 72 24 114-30 44-73 62-131 55-45-11-71-39-80-84 1-25 13-45 36-59Z" fill="#F8B965"/>
+  <path d="M544 306c35-19 74-26 118-22-21 18-41 30-60 36-21 5-40 0-58-14Z" fill="#5E3217"/>
+  <circle cx="566" cy="356" r="12" fill="#081638"/>
+  <circle cx="659" cy="356" r="12" fill="#081638"/>
+  <circle cx="570" cy="352" r="4" fill="white"/>
+  <circle cx="663" cy="352" r="4" fill="white"/>
+  <path d="M616 382c13-4 23-1 30 7-8 13-19 17-35 13-5-8-3-14 5-20Z" fill="#52311D"/>
+  <path d="M590 421c22 10 45 9 69-5" stroke="#8D4D2D" stroke-width="7" stroke-linecap="round"/>
+  <path d="M515 342c-31-13-55-34-72-62" stroke="#6F3C1F" stroke-width="7" stroke-linecap="round"/>
+  <path d="M501 367c-34 2-63-7-86-27" stroke="#6F3C1F" stroke-width="7" stroke-linecap="round"/>
+  <path d="M709 337c26-16 45-38 58-66" stroke="#6F3C1F" stroke-width="7" stroke-linecap="round"/>
+  <path d="M716 369c31-5 56-18 75-41" stroke="#6F3C1F" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="348" cy="418" r="32" fill="#1769F5"/>
+  <path d="M335 423c20-24 41-24 62 0" stroke="white" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="342" cy="402" r="8" fill="white"/>
+  <circle cx="365" cy="398" r="8" fill="white"/>
+  <circle cx="384" cy="405" r="7" fill="white"/>
+  <circle cx="331" cy="410" r="7" fill="white"/>
+  <rect x="89" y="102" width="104" height="44" rx="22" fill="white"/>
+  <path d="M119 124c13-16 26-16 39 0" stroke="#14A04F" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="123" cy="113" r="5" fill="#14A04F"/>
+  <circle cx="139" cy="110" r="5" fill="#14A04F"/>
+  <circle cx="155" cy="113" r="5" fill="#14A04F"/>
+  <circle cx="114" cy="119" r="4" fill="#14A04F"/>
+  <text x="66" y="58" fill="#09349A" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">pet friendly</text>
+  <text x="522" y="58" fill="#0F7A31" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">trusted care</text>
+  <circle cx="646" cy="78" r="7" fill="#FF8A1E"/>
+  <circle cx="672" cy="67" r="5" fill="#FFB14C"/>
+  <circle cx="102" cy="448" r="8" fill="#FF8A1E"/>
+  <circle cx="128" cy="431" r="5" fill="#FFB14C"/>
+</svg>
