@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- Static SVGs in /public are intentionally served directly for this export-only marketing site. */
 import Link from "next/link";
-import { RealFindMap } from "./real-find-map";
+import { LiveFindMap } from "./live-find-map";
+import { VendorTypesList } from "./vendor-types-list";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -35,14 +36,14 @@ const features: Array<{
 }> = [
   {
     title: "Dog Friendly Places",
-    body: "Discover parks, restaurants, cafes and stays that welcome pets.",
+    body: "Discover parks, restaurants, condos and places that welcome pets.",
     cta: "Explore places",
     tone: "green",
   },
   {
-    title: "Pet Sitters & Trainers",
-    body: "Find trusted sitters, walkers and certified trainers near you.",
-    cta: "Book care",
+    title: "Pet Care & Trainers",
+    body: "Find trainers, groomers, pet hotels and care providers nearby.",
+    cta: "Find care",
     tone: "blue",
   },
   {
@@ -52,9 +53,9 @@ const features: Array<{
     tone: "orange",
   },
   {
-    title: "Tele Vet 24/7",
-    body: "Talk to a licensed vet by video when your pet needs help.",
-    cta: "Connect now",
+    title: "Telehealth Vet Visits",
+    body: "Request a video visit with an available veterinarian when needed.",
+    cta: "Book a visit",
     tone: "sky",
   },
   {
@@ -63,18 +64,6 @@ const features: Array<{
     cta: "View events",
     tone: "purple",
   },
-];
-
-const vendorTypes = [
-  "Parks & recreation",
-  "Restaurants & cafes",
-  "Pet friendly stays",
-  "Pet care services",
-  "Trainers & walkers",
-  "Shops & boutiques",
-  "Veterinary clinics",
-  "Event organizers",
-  "Experience providers",
 ];
 
 const vendorBenefits = [
@@ -245,12 +234,12 @@ export function PlacesSection() {
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-7 text-slate-600">
-            Visual preview only. Search, maps and filters will connect in a
-            later product phase.
+            Discover parks, restaurants, cafes and stays that welcome pets,
+            starting with popular places around Bangkok.
           </p>
         </div>
 
-        <RealFindMap />
+        <LiveFindMap />
       </div>
     </section>
   );
@@ -343,16 +332,7 @@ export function VendorSection() {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-[1.75rem] border border-blue-100 bg-white p-6 shadow-lg shadow-blue-950/5">
               <h3 className="text-xl font-black text-blue-950">Vendor types</h3>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                {vendorTypes.map((type) => (
-                  <div key={type} className="flex items-center gap-3 rounded-2xl bg-slate-50 p-3">
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-green-100 text-green-700">
-                      <PawIcon className="h-5 w-5" />
-                    </span>
-                    <span className="text-sm font-extrabold text-blue-950">{type}</span>
-                  </div>
-                ))}
-              </div>
+              <VendorTypesList />
             </div>
 
             <div className="rounded-[1.75rem] border border-blue-100 bg-white p-6 shadow-lg shadow-blue-950/5">
@@ -373,30 +353,39 @@ export function VendorSection() {
           </div>
 
           <div className="rounded-[1.75rem] border border-blue-100 bg-white p-5 shadow-xl shadow-blue-950/10">
-            <div className="relative overflow-hidden rounded-[1.35rem] bg-blue-950 p-6 text-white">
-              <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-blue-500/30 blur-2xl" />
-              <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-green-400/20 blur-2xl" />
-              <div className="relative">
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-extrabold">
-                  <PawIcon className="h-4 w-4" />
-                  Vendor growth
-                </span>
-                <h3 className="mt-24 max-w-sm text-3xl font-black tracking-tight">
+            <div className="overflow-hidden rounded-[1.35rem] bg-white">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-[1.35rem]">
+                <img
+                  src="/grow-your-pet.png"
+                  alt="Vendor with a dog in a pet friendly business setting"
+                  width={960}
+                  height={600}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="px-4 pb-1 pt-4 sm:px-5">
+                <h3 className="text-[1.2rem] font-black tracking-tight text-blue-950">
                   Ready to grow your pet friendly business?
                 </h3>
-                <p className="mt-3 max-w-md text-sm leading-7 text-blue-100">
-                  Create a public business presence and connect with the pet
-                  parents already searching for places, care and experiences.
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  Create your free vendor profile in minutes and start connecting with happy pet parents.
                 </p>
+                <a
+                  href="#"
+                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-5 py-3.5 text-sm font-black text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700"
+                >
+                  Sign Up Your Business
+                  <PawIcon className="h-4 w-4" />
+                </a>
+                <a
+                  href="#"
+                  className="mt-2 inline-flex w-full items-center justify-center gap-2 text-sm font-black text-blue-700 transition hover:text-blue-800"
+                >
+                  Learn More
+                  <ArrowIcon />
+                </a>
               </div>
             </div>
-            <a
-              href="#"
-              className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-5 py-4 text-sm font-black text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700"
-            >
-              Sign Up Your Business
-              <PawIcon className="h-4 w-4" />
-            </a>
           </div>
         </div>
       </div>
@@ -407,43 +396,39 @@ export function VendorSection() {
 export function FooterCTA() {
   return (
     <section id="download" className="bg-blue-700 px-5 py-10 text-white sm:px-8">
-      <div className="mx-auto flex max-w-7xl flex-col gap-7 md:flex-row md:items-center md:justify-between">
-        <div className="flex items-center gap-5">
-          <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white/10">
-            <PawIcon className="h-9 w-9" />
-          </span>
-          <div>
-            <h2 className="text-3xl font-black tracking-tight">
-              More tail wags. Less stress.
-            </h2>
-            <p className="mt-2 text-blue-100">
-              Download HappyPaws and enjoy every pet moment together.
-            </p>
+      <div className="mx-auto flex max-w-7xl flex-col gap-8">
+        <div className="flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
+          <div className="flex items-center gap-5">
+            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white/10">
+              <PawIcon className="h-9 w-9" />
+            </span>
+            <div>
+              <h2 className="text-3xl font-black tracking-tight">
+                More tail wags. Less stress.
+              </h2>
+              <p className="mt-2 text-blue-100">
+                Download HappyPaws and enjoy every pet moment together.
+              </p>
+            </div>
+          </div>
+          <StoreBadges />
+        </div>
+
+        <div className="flex flex-col gap-3 border-t border-white/15 pt-5 text-sm text-blue-100 md:flex-row md:items-center md:justify-between">
+          <p>Copyright 2026 HappyPaws. Public marketing and support website.</p>
+          <div className="flex flex-wrap gap-4 text-white">
+            <Link className="transition hover:text-blue-50" href="/privacy-policy">
+              Privacy Policy
+            </Link>
+            <Link className="transition hover:text-blue-50" href="/terms-of-service">
+              Terms of Service
+            </Link>
+            <Link className="transition hover:text-blue-50" href="/delete-data">
+              Delete Data
+            </Link>
           </div>
         </div>
-        <StoreBadges />
       </div>
     </section>
-  );
-}
-
-export function SiteFooter() {
-  return (
-    <footer className="border-t border-blue-100 bg-white">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-5 py-8 text-sm text-slate-600 sm:px-8 md:flex-row md:items-center md:justify-between">
-        <p>Copyright 2026 HappyPaws. Public marketing and support website.</p>
-        <div className="flex flex-wrap gap-4">
-          <Link className="transition hover:text-blue-700" href="/privacy-policy">
-            Privacy Policy
-          </Link>
-          <Link className="transition hover:text-blue-700" href="/terms-of-service">
-            Terms of Service
-          </Link>
-          <Link className="transition hover:text-blue-700" href="/delete-data">
-            Delete Data
-          </Link>
-        </div>
-      </div>
-    </footer>
   );
 }
